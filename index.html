@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>명랑 가치 설문</title>
+  <style>
+    body {
+      font-family: Arial;
+      text-align: center;
+      margin-top: 100px;
+    }
+    button {
+      padding: 15px 30px;
+      margin: 10px;
+      font-size: 18px;
+      cursor: pointer;
+    }
+    #troll {
+      display: none;
+      font-size: 40px;
+      font-weight: bold;
+      color: red;
+      word-break: break-all;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>명랑은 당신에게 얼마의 가치가 있나요?</h1>
+
+  <button onclick="goImage()">1. 만원 이상</button>
+  <button onclick="trollMode()">2. 만원 이하</button>
+
+  <div id="troll"></div>
+
+  <script>
+    function goImage() {
+      // 이미지 페이지로 이동
+      window.location.href = "image.html";
+    }
+
+    function trollMode() {
+      const trollDiv = document.getElementById("troll");
+      trollDiv.style.display = "block";
+
+      let text = "";
+      for (let i = 0; i < 200; i++) {
+        text += "나가 이새끼야 ";
+      }
+      trollDiv.innerText = text;
+    }
+  </script>
+
+</body>
+</html>
